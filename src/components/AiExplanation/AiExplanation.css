@@ -1,0 +1,15 @@
+.ai-explanation {
+  max-width: 680px;
+
+  margin-top: 16px;
+  padding: 20px;
+
+  background: #FFFCF6;
+
+  border: 1px solid var(--color-amber-soft);
+  border-radius: 12px;
+}
+
+.ai-explanation p {
+  line-height: 1.6;
+}

@@ -1,0 +1,55 @@
+.topic-card {
+  padding: 18px;
+
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.topic-card__progress {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background: #C7CEDB;
+
+  display: grid;
+  place-items: center;
+
+  font-weight: 800;
+}
+
+.topic-card__information {
+  flex: 1;
+}
+
+.topic-card__information h3,
+.topic-card__information p {
+  margin: 3px 0;
+}
+
+.topic-card__information p,
+.topic-card__information small {
+  color: var(--color-text-secondary);
+}
+
+.topic-card__status {
+  padding: 5px 10px;
+
+  background: var(--color-amber-soft);
+  color: #8A611E;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.topic-card { width: 100%; text-align: left; font: inherit; color: inherit; cursor: pointer; }
+.topic-card:hover { border-color: #a4aec3; }
+.topic-card:focus-visible { outline: 3px solid #a77726; outline-offset: 3px; }

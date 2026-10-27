@@ -1,0 +1,241 @@
+.tutor-page__heading {
+  font: 400 26px var(--font-title);
+  margin: 24px 0 12px;
+}
+
+.tutor-page__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tutor-page__subjects {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+}
+
+.tutor-page__note {
+  margin: 12px 0 0;
+  font-size: 13px;
+}
+
+.tutor-class__students {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background: var(--color-background);
+  border-radius: 10px;
+}
+
+.tutor-class__students ul {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+
+.tutor-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.tutor-section-heading h2 {
+  margin-bottom: 12px;
+}
+
+.tutor-management-form {
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+  padding: 18px;
+  margin: 16px 0;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: #fbfcfe;
+}
+
+.tutor-management-form h3 {
+  margin: 0;
+  font: 400 21px var(--font-title);
+}
+
+.tutor-management-form label,
+.tutor-management-form__field {
+  display: grid;
+  gap: 6px;
+  width: min(100%, 520px);
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tutor-management-form input:not([type="checkbox"]),
+.tutor-management-form select,
+.tutor-management-form textarea,
+.tutor-management-form__field input,
+.tutor-management-form__field select {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: white;
+  color: var(--color-primary);
+  font: inherit;
+}
+
+.tutor-management-form textarea {
+  resize: vertical;
+}
+
+.tutor-management-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.tutor-class .nexo-list__item {
+  flex-wrap: wrap;
+}
+
+.tutor-topic-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tutor-topic-row p {
+  margin: 6px 0;
+}
+
+.tutor-topic-row .tutor-management-form__actions {
+  justify-content: flex-end;
+}
+
+.tutor-topics > h2 {
+  margin-top: 0;
+}
+
+.tutor-shared-warning {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  color: #604615;
+  background: #fff7e6;
+  border: 1px solid #e8c987;
+  border-radius: 8px;
+}
+
+.tutor-management-success {
+  padding: 10px 12px;
+  color: #1d7142;
+  background: #e9f7ee;
+  border-radius: 8px;
+}
+
+.tutor-shared-warning label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 800px) {
+  .tutor-page__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .tutor-section-heading,
+  .tutor-topic-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .tutor-topic-row .tutor-management-form__actions {
+    justify-content: flex-start;
+  }
+}
+
+.tutor-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 20px;
+  border-bottom: 1px solid var(--color-border);
+  overflow-x: auto;
+}
+
+.tutor-tabs button {
+  padding: 10px 16px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tutor-tabs button[aria-selected="true"] {
+  border-bottom-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.tutor-questions {
+  flex-basis: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-background);
+}
+
+.tutor-questions h4 {
+  margin: 0;
+}
+
+.tutor-question-list,
+.tutor-question-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tutor-question-list > li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tutor-question-list ul {
+  margin-top: 6px;
+  padding-left: 12px;
+}
+
+.tutor-question-options {
+  display: grid;
+  gap: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.tutor-question-options__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tutor-question-options__row input[type="text"],
+.tutor-question-options__row input:not([type]) {
+  flex: 1;
+}

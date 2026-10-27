@@ -1,0 +1,51 @@
+.exercise-page {
+  width: 100%;
+}
+
+.exercise-picker {
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+}
+
+.exercise-picker select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #dce1ea;
+  border-radius: 8px;
+  background: white;
+}
+
+.exercise-picker .nexo-label {
+  max-width: 360px;
+  width: 100%;
+}
+
+.exercise-topic {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.exercise-topic h2 {
+  margin: 6px 0 0;
+}
+
+.exercise-topic .secondary-button {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.exercise-next {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.exercise-next .secondary-button {
+  text-decoration: none;
+}

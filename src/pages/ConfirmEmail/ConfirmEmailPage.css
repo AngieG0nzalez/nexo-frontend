@@ -1,0 +1,26 @@
+.confirm-email-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.confirm-email-page__card {
+  width: min(100%, 520px);
+}
+
+.confirm-email-page__card h1 {
+  font: 400 32px var(--font-title);
+}
+
+.confirm-email-page__card form,
+.confirm-email-page__card > button {
+  margin-top: 16px;
+}
+
+.confirm-email-page__success {
+  padding: 11px 13px;
+  color: #1d7142;
+  background: #e9f7ee;
+  border-radius: 8px;
+}
