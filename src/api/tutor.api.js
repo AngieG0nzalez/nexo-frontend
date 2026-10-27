@@ -15,3 +15,8 @@ export const updateTutorClass = (classId, data) =>
     method: "PATCH",
     body: JSON.stringify(data),
   });
+export const updateMyTutorProfile = (tutorId, data) =>
+  apiRequest(`/tutors/${tutorId}`, {
+    method: "PATCH",
+    body: JSON.stringify(data),
+  });

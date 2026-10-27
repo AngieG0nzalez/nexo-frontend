@@ -15,8 +15,6 @@ const initialRegistration = {
   password: "",
   grade: "9",
   requested_role: "student",
-  specialty: "",
-  message: "",
 };
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -97,18 +95,12 @@ export default function LoginPage() {
         }
         // No se crean cuentas aquí: se solicita revisión administrativa.
         await requestRegistration({
-          name: registration.name.trim(),
-          last_name: registration.last_name.trim(),
+          name: `${registration.name.trim()} ${registration.last_name.trim()}`,
           email: registration.email.trim(),
           password: registration.password,
           requested_role: registration.requested_role,
           grade:
             registration.requested_role === "student" ? Number(registration.grade) : null,
-          specialty:
-            registration.requested_role === "tutor"
-              ? registration.specialty.trim()
-              : null,
-          message: registration.message || "",
         });
 
         setSuccess(
@@ -267,7 +259,7 @@ export default function LoginPage() {
                         Nombre
                         <input
                           required
-                          maxLength={80}
+                          maxLength={50}
                           value={registration.name}
                           onChange={(e) =>
                             setRegistration({
@@ -282,7 +274,7 @@ export default function LoginPage() {
                         Apellido
                         <input
                           required
-                          maxLength={80}
+                          maxLength={50}
                           value={registration.last_name}
                           onChange={(e) =>
                             setRegistration({
@@ -360,20 +352,10 @@ export default function LoginPage() {
                         </select>
                       </label>
                     ) : (
-                      <label>
-                        Especialidad
-                        <input
-                          value={registration.specialty}
-                          onChange={(e) =>
-                            setRegistration({
-                              ...registration,
-                              specialty: e.target.value,
-                            })
-                          }
-                          placeholder="Ej. Álgebra y geometría"
-                          required
-                        />
-                      </label>
+                      <p className="auth-form__note">
+                        Podrás completar tu especialidad y biografía en «Mi perfil»
+                        cuando tu cuenta sea aprobada.
+                      </p>
                     )}
                     <p className="auth-form__note">
                       La solicitud no crea una cuenta automáticamente. Recibirás

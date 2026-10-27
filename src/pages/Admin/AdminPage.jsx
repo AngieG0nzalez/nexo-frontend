@@ -143,7 +143,7 @@ export default function AdminPage() {
               <div className="nexo-list__item" key={request.id}>
                 <div>
                   <strong>
-                    {request.name} {request.last_name}
+                    {request.name}
                   </strong>
 
                   <p className="muted">{request.email}</p>
@@ -157,14 +157,6 @@ export default function AdminPage() {
 
                   {request.grade != null && (
                     <p className="muted">Grado: {request.grade}</p>
-                  )}
-
-                  {request.specialty && (
-                    <p className="muted">Especialidad: {request.specialty}</p>
-                  )}
-
-                  {request.message && (
-                    <p className="muted">Mensaje: {request.message}</p>
                   )}
                 </div>
 

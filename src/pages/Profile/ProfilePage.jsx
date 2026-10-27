@@ -8,6 +8,7 @@ import {
 import { getCurrentUser } from "../../api/auth.api.js";
 import { useAuth } from "../../context/AuthContext.jsx";
 import "./ProfilePage.css";
+import TutorProfileCard from "./TutorProfileCard.jsx";
 
 const roleLabels = {
   student: "Estudiante",
@@ -255,6 +256,8 @@ export default function ProfilePage() {
           </button>
         </form>
       </section>
+
+      {profile.role === "tutor" && <TutorProfileCard />}
 
       <section className="nexo-card">
         <h2>Solicitar cambio de correo</h2>
